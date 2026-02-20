@@ -27,10 +27,7 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Tipo: " + tipo() +
-                " | Nombre: " + nombre +
-                " | ID: " + id +
-                " | Sano: " + (sano ? "Sí" : "No");
+        return "Tipo: " + tipo() + " | Nombre: " + nombre + " | ID: " + id + " | Sano: " + (sano ? "Sí" : "No");
     }
 
     public String toFileString() {

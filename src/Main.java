@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Veterinaria vet = new Veterinaria();
+
+        FicheroAnimales fichero = new FicheroAnimales("animales.txt");
+        Veterinaria vet = new Veterinaria(fichero);
+
         int opcion;
 
         do {
@@ -16,7 +20,7 @@ public class Main {
             System.out.print("Seleccione una opción: ");
 
             opcion = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine();
 
             switch (opcion) {
 
@@ -47,12 +51,12 @@ public class Main {
                     break;
 
                 case 3:
-                    vet.guardarEnFichero();
+                    vet.guardar();
                     break;
 
                 case 4:
-                    vet.guardarEnFichero();
-                    System.out.println("Saliendo del programa...");
+                    vet.guardar();
+                    System.out.println("Saliendo...");
                     break;
 
                 default:
