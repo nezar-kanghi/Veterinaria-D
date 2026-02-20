@@ -1,2 +1,2 @@
-Perro,Miguel,1234,true
-Perro,Juan,50,true
+Perro,Manchas,192,true
+Gato,Lucifer,913,false
